@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Increment Counter</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <h2>Increment Counter</h2>
 
+  <!-- Counter Paragraph -->
+  <p id="counter">0</p>
+
+  <!-- Increment Button -->
+  <button id="incrementBtn">Increment</button>
+
+  <script>
+    // Select elements
+    const counterElement = document.getElementById("counter");
+    const incrementBtn = document.getElementById("incrementBtn");
+
+    // Initial counter value
+    let count = 0;
+
+    // Button click event
+    incrementBtn.addEventListener("click", () => {
+      // Show alert with current (un-incremented) value
+      alert("Current value: " + count);
+
+      // Increment and update UI
+      count++;
+      counterElement.textContent = count;
+    });
+  </script>
 </body>
-
 </html>
+
