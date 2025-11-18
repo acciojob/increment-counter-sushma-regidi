@@ -1,16 +1,16 @@
-//your JS code here. If required.
-let count = 0; 
+// Get elements
+const counter = document.getElementById("counter");
+const button = document.getElementById("incrementBtn");
 
-function incrementCounter() {
-    // Show alert with the un-incremented value
-    alert(count);
+// Add click listener
+button.addEventListener("click", function() {
+    let currentValue = Number(counter.textContent);
 
-    // Now increment the value
-    count++;
+    // Alert the un-incremented value
+    alert(currentValue);
 
-    // Update counter on the page
-    document.getElementById("counter").textContent = count;
-}
+    // Increment the counter
+    counter.textContent = currentValue + 1;
+});
 
-document.getElementById("incrementBtn").addEventListener("click", incrementCounter);
 
